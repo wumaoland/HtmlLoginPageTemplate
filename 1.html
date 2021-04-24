@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="login">Login Page</div>
+        <input type="text" id="name" placeholder="Please enter your account name">
+        <input type="text" id="password" placeholder="Please enter your password">
+        <input type="submit" value="submit">
+        <div id="testForLogin"></div>
+    </div>
+</body>
+
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0px;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../image/bz.jpg");
+        background-size: cover;
+    }
+
+    .center {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        background-color: rgba(236, 240, 241, 0.5);
+        padding: 30px;
+        width: 30%;
+        min-width: 30%;
+        height: 50%;
+        min-width: 400px;
+        min-height: 400px;
+        box-shadow: 0px 0px 10px grey;
+        animation: in 0.8s linear;
+    }
+
+    input {
+        width: 90%;
+        margin: 15px;
+        height: 35px;
+        padding: 5px;
+        text-align: left;
+        border-radius: 10px;
+        border: 0px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    [type="submit"] {
+        text-align: center;
+    }
+
+    .login {
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 10%;
+    }
+
+
+    input:focus {
+        outline: none;
+        width: 92%;
+        margin: 15px;
+        height: 40px;
+        padding: 5px;
+        border-radius: 10px;
+        border: 0px;
+        background-color: rgba(255, 255, 255, 0.8);
+        animation: input 0.3s linear;
+        animation-fill-mode: both;
+    }
+
+
+    @keyframes input{
+        0% {
+            width: 90%;
+            height: 35px;
+        }
+
+        100% {
+            width: 92%;
+            height: 40px;
+        }
+    }
+
+    @keyframes in {
+        from {
+            transform: translate(0px, -50px);
+        }
+
+        to {
+            transform: translate(0px, 0px);
+        }
+    }
+</style>
+
+</html>
